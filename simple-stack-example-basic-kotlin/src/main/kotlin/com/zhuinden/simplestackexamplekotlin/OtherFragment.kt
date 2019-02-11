@@ -18,6 +18,10 @@ class OtherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        bug144.onClick {
+            MainActivity.get(view.context).navigateTo(OtherKey())
+        }
+
         bug145.onClick {
             MainActivity.get(view.context).goBack()
             MainActivity.get(view.context).navigateTo(OtherKey())
