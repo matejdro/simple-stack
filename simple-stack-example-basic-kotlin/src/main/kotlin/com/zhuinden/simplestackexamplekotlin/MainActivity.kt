@@ -60,6 +60,10 @@ class MainActivity : AppCompatActivity(), StateChanger {
         backstackDelegate.backstack.goTo(key)
     }
 
+    fun goBack() {
+        backstackDelegate.backstack.goBack()
+    }
+
     override fun handleStateChange(stateChange: StateChange, completionCallback: StateChanger.Callback) {
         if (stateChange.isTopNewStateEqualToPrevious) {
             completionCallback.stateChangeComplete()
